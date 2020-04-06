@@ -1,0 +1,39 @@
+Crear un footprint
+mediante 'e' buscar la huella
+
+al buscar componentes ver el voltaje: 20*1.3
+
+Insertar en cada componente:
+	- Hoja de datos
+	- Huella
+	- Número de parte
+	
+Es el estándar de paso del proto 2.54 mm
+	
++ Crear huella para cada componente (Ejemplo)
+	- Ir al editor de huellas
+	- buscar huella
+	- Buscar SOT Packages SMD
+	- SOT-23 Hand-soldering
+	- Dar doble click
+	
++ Generar listado de redes
+	- Leer listado de redes: Desplega todos los footprints
+	- 
+	
+	Tener activado líneas áreas (se puede utilizar f3)
+	Qué es filtros electrónica
+	Pensar en entrada-salida
+	
+	Edgecuts: capa para añadir líneas gráficas, irse a 1 mm,
+	Margen: capa para medir
+	+ Herramientas modernas acelerado (F11)
+		- Añadir area de relleno
+		- Se desactiva en la décima opción del menú izquierdo
+	
+	
+Comentarios:
+	- Me aparecian en un orden diferente los nombres
+	- ¿Está mal si a mi el footprint me aparecía redondeado?
+	- Nombre del terminal block ¿Por qué Phoenix? TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal
+	- No logro ver la cruz central de cada componente

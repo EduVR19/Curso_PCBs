@@ -1,0 +1,17 @@
+#Archivos
+Curso Corona-20200323T173714Z-001.zip
+as.txt
+*.kicad_mod
+*.stp
+*.STEP
+
+*.exe
+*.zip
+*.rar
+
+
+
+#Carpetas
+Kicad_Footprints_PdXLabs.pretty
+/Kicad_Modelos_3D_PdXLabs
+*/Libraries

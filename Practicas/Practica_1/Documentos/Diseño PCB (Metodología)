@@ -1,0 +1,9 @@
+Activar el modo huella
+Separar los componentes
+Hacer las medidas y trazar el corte
+Basarse en el esquemático
+Hacer las líneas o los rats nest lo más derechos posibles
+Acomodar los componentes basándome en el esquemático
+Con el cursor largo y el grid en 1 mm empezar a marcar el contorno de corte con la capa Edge.Cuts
+Al enrutar primero hacerlo con las señales cortas que son fácil de visualizar
+Con ayuda de la segunda capa realicé una conexión que no se podía lograr

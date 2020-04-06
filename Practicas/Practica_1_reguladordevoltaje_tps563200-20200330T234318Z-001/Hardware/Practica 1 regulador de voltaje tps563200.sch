@@ -1,0 +1,422 @@
+EESchema Schematic File Version 4
+LIBS:Practica 1 regulador de voltaje tps563200-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Regulador de voltaje."
+Date "2020-03-23"
+Rev "v1.5"
+Comp "EVRV"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5E794FA5
+P 2850 3850
+F 0 "J1" H 2850 3650 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2850 3625 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 2850 3850 50  0001 C CNN
+F 3 "http://www.agspecinfo.com/pdfs/T/TRTG03.PDF" H 2850 3850 50  0001 C CNN
+F 4 "TRTG-02" H 2850 3850 50  0001 C CNN "PartNo"
+	1    2850 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5E79524F
+P 3925 4125
+F 0 "C1" H 3925 4200 50  0000 L CNN
+F 1 "10uF" H 3925 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 3925 4125 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/40/taj-776811.pdf" H 3925 4125 50  0001 C CNN
+F 4 "TAJB106K020SNJ" H 3925 4125 50  0001 C CNN "PartNo"
+	1    3925 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E795317
+P 3100 3900
+F 0 "#PWR0101" H 3100 3650 50  0001 C CNN
+F 1 "GND" H 3105 3727 50  0001 C CNN
+F 2 "" H 3100 3900 50  0001 C CNN
+F 3 "" H 3100 3900 50  0001 C CNN
+	1    3100 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3850 3100 3850
+Wire Wire Line
+	3100 3850 3100 3900
+$Comp
+L power:GND #PWR0102
+U 1 1 5E7954A4
+P 3925 4275
+F 0 "#PWR0102" H 3925 4025 50  0001 C CNN
+F 1 "GND" H 3930 4102 50  0001 C CNN
+F 2 "" H 3925 4275 50  0001 C CNN
+F 3 "" H 3925 4275 50  0001 C CNN
+	1    3925 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 4225 3925 4275
+Wire Wire Line
+	3100 3750 3050 3750
+$Comp
+L power:VDD #PWR0103
+U 1 1 5E7956E7
+P 3100 3675
+F 0 "#PWR0103" H 3100 3525 50  0001 C CNN
+F 1 "VDD" H 3100 3825 50  0000 C CNN
+F 2 "" H 3100 3675 50  0001 C CNN
+F 3 "" H 3100 3675 50  0001 C CNN
+	1    3100 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0104
+U 1 1 5E7957D8
+P 4200 3875
+F 0 "#PWR0104" H 4200 3725 50  0001 C CNN
+F 1 "VDD" H 4200 4025 50  0000 C CNN
+F 2 "" H 4200 3875 50  0001 C CNN
+F 3 "" H 4200 3875 50  0001 C CNN
+	1    4200 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3675 3100 3750
+Wire Notes Line
+	3375 3425 3375 4250
+Wire Notes Line
+	3375 4250 2550 4250
+Wire Notes Line
+	2550 4250 2550 3425
+Wire Notes Line
+	2550 3425 3375 3425
+Text Notes 2725 4200 0    50   ~ 0
+Conector de\nalimentacion
+Wire Wire Line
+	4200 4025 4200 4000
+Wire Wire Line
+	3925 4000 3925 4025
+Wire Wire Line
+	4200 3875 4200 4000
+Connection ~ 4200 4000
+Wire Wire Line
+	3925 4000 4200 4000
+$Comp
+L pdxlbs:TPS563200 U1
+U 1 1 5E799866
+P 4900 3600
+F 0 "U1" H 5150 3700 50  0000 C CNN
+F 1 "TPS563200" H 5325 3100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 4900 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps563200.pdf" H 7050 3500 50  0001 C CNN
+F 4 "TPS563200DDCR" H 6450 3400 50  0001 C CNN "PartNo"
+	1    4900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5E79A072
+P 4850 3625
+F 0 "#PWR0107" H 4850 3375 50  0001 C CNN
+F 1 "GND" H 4855 3452 50  0001 C CNN
+F 2 "" H 4850 3625 50  0001 C CNN
+F 3 "" H 4850 3625 50  0001 C CNN
+	1    4850 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3625 4850 3600
+Wire Wire Line
+	4850 3600 4900 3600
+Wire Wire Line
+	5950 3600 5900 3600
+Wire Wire Line
+	4900 3800 4725 3800
+Wire Wire Line
+	4725 3800 4725 3275
+$Comp
+L power:VDD #PWR0108
+U 1 1 5E79AB29
+P 5925 3800
+F 0 "#PWR0108" H 5925 3650 50  0001 C CNN
+F 1 "VDD" H 5925 3950 50  0000 C CNN
+F 2 "" H 5925 3800 50  0001 C CNN
+F 3 "" H 5925 3800 50  0001 C CNN
+	1    5925 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 3800 5900 3800
+$Comp
+L Device:L_Small L1
+U 1 1 5E79AF54
+P 6350 3275
+F 0 "L1" V 6400 3275 50  0000 C CNN
+F 1 "2.2uH" V 6300 3275 50  0000 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 6350 3275 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/400/b82422a_100-1527647.pdf" H 6350 3275 50  0001 C CNN
+F 4 "B82422A1222K100" V 6350 3275 50  0001 C CNN "PartNo."
+	1    6350 3275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5E79B431
+P 6725 3450
+F 0 "C6" H 6725 3525 50  0000 L CNN
+F 1 "22uF" H 6725 3375 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 6725 3450 50  0001 C CNN
+F 3 "https://www.mouser.mx/ProductDetail/Taiyo-Yuden/TMK325BJ226MM-P?qs=sGAEpiMZZMsh%252B1woXyUXj5P6nLEbK7WMAmz3WMZJItQ%3D" H 6725 3450 50  0001 C CNN
+	1    6725 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3275 6725 3275
+Wire Wire Line
+	6725 3275 6725 3350
+Connection ~ 6725 3275
+$Comp
+L power:GND #PWR0109
+U 1 1 5E79BD56
+P 6725 3625
+F 0 "#PWR0109" H 6725 3375 50  0001 C CNN
+F 1 "GND" H 6730 3452 50  0001 C CNN
+F 2 "" H 6725 3625 50  0001 C CNN
+F 3 "" H 6725 3625 50  0001 C CNN
+	1    6725 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 3625 6725 3550
+$Comp
+L Device:R_Small R1
+U 1 1 5E79C77A
+P 7400 3825
+F 0 "R1" H 7459 3871 50  0000 L CNN
+F 1 "54.9K" V 7400 3775 24  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 7400 3825 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1664068.pdf" H 7400 3825 50  0001 C CNN
+F 4 "RC1210FR-0754K9L" H 7400 3825 50  0001 C CNN "PartNo"
+	1    7400 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3925 7400 4000
+$Comp
+L power:GND #PWR0111
+U 1 1 5E79CB3A
+P 7400 4350
+F 0 "#PWR0111" H 7400 4100 50  0001 C CNN
+F 1 "GND" H 7405 4177 50  0001 C CNN
+F 2 "" H 7400 4350 50  0001 C CNN
+F 3 "" H 7400 4350 50  0001 C CNN
+	1    7400 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4000 7400 4000
+$Comp
+L power:+5V #PWR0112
+U 1 1 5E79E912
+P 7400 3225
+F 0 "#PWR0112" H 7400 3075 50  0001 C CNN
+F 1 "+5V" H 7400 3375 50  0000 C CNN
+F 2 "" H 7400 3225 50  0001 C CNN
+F 3 "" H 7400 3225 50  0001 C CNN
+	1    7400 3225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3225 7400 3275
+Connection ~ 7400 3275
+$Comp
+L power:GND #PWR0113
+U 1 1 5E79EED6
+P 8325 3750
+F 0 "#PWR0113" H 8325 3500 50  0001 C CNN
+F 1 "GND" H 8330 3577 50  0001 C CNN
+F 2 "" H 8325 3750 50  0001 C CNN
+F 3 "" H 8325 3750 50  0001 C CNN
+	1    8325 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8325 3700 8325 3750
+Wire Wire Line
+	8325 3525 8325 3600
+Wire Notes Line
+	8050 3275 8050 4100
+Wire Notes Line
+	8050 4100 8875 4100
+Wire Notes Line
+	8875 4100 8875 3275
+Wire Notes Line
+	8875 3275 8050 3275
+Text Notes 8700 4050 2    50   ~ 0
+Conector de \nSalida 5V
+$Comp
+L power:+5V #PWR0114
+U 1 1 5E79F9ED
+P 8325 3525
+F 0 "#PWR0114" H 8325 3375 50  0001 C CNN
+F 1 "+5V" H 8325 3675 50  0000 C CNN
+F 2 "" H 8325 3525 50  0001 C CNN
+F 3 "" H 8325 3525 50  0001 C CNN
+	1    8325 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5E829DC6
+P 4200 4125
+F 0 "C2" H 4200 4200 50  0000 L CNN
+F 1 "10uF" H 4200 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 4200 4125 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/40/taj-776811.pdf" H 4200 4125 50  0001 C CNN
+F 4 "TAJB106K020SNJ" H 4200 4125 50  0001 C CNN "PartNo"
+	1    4200 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E829DCD
+P 4200 4275
+F 0 "#PWR0105" H 4200 4025 50  0001 C CNN
+F 1 "GND" H 4205 4102 50  0001 C CNN
+F 2 "" H 4200 4275 50  0001 C CNN
+F 3 "" H 4200 4275 50  0001 C CNN
+	1    4200 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4225 4200 4275
+$Comp
+L Device:C_Small C3
+U 1 1 5E82A891
+P 4450 4125
+F 0 "C3" H 4450 4200 50  0000 L CNN
+F 1 "0.1uF" H 4450 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 4450 4125 50  0001 C CNN
+F 3 "https://www.mouser.mx/ProductDetail/AVX/12101C104KAZ4A?qs=tl6yqnxyPsFtB9t975fE6w==" H 4450 4125 50  0001 C CNN
+F 4 "12101C104KAZ4A" H 4450 4125 50  0001 C CNN "PartNo"
+	1    4450 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5E82A898
+P 4450 4275
+F 0 "#PWR0106" H 4450 4025 50  0001 C CNN
+F 1 "GND" H 4455 4102 50  0001 C CNN
+F 2 "" H 4450 4275 50  0001 C CNN
+F 3 "" H 4450 4275 50  0001 C CNN
+	1    4450 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4225 4450 4275
+Wire Wire Line
+	4200 4000 4450 4000
+Wire Wire Line
+	4450 4025 4450 4000
+Connection ~ 4450 4000
+Wire Wire Line
+	4450 4000 4900 4000
+Wire Wire Line
+	6725 3275 7050 3275
+$Comp
+L Device:C_Small C5
+U 1 1 5E8305A9
+P 7050 3450
+F 0 "C5" H 7050 3525 50  0000 L CNN
+F 1 "22uF" H 7050 3375 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 7050 3450 50  0001 C CNN
+F 3 "https://www.mouser.mx/ProductDetail/Taiyo-Yuden/TMK325BJ226MM-P?qs=sGAEpiMZZMsh%252B1woXyUXj5P6nLEbK7WMAmz3WMZJItQ%3D" H 7050 3450 50  0001 C CNN
+	1    7050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5E8305B1
+P 7050 3625
+F 0 "#PWR0110" H 7050 3375 50  0001 C CNN
+F 1 "GND" H 7055 3452 50  0001 C CNN
+F 2 "" H 7050 3625 50  0001 C CNN
+F 3 "" H 7050 3625 50  0001 C CNN
+	1    7050 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3625 7050 3550
+Wire Wire Line
+	7050 3275 7050 3350
+Connection ~ 7050 3275
+Wire Wire Line
+	7050 3275 7400 3275
+$Comp
+L Device:C_Small C4
+U 1 1 5E832A4A
+P 5950 3400
+F 0 "C4" H 5950 3475 50  0000 L CNN
+F 1 "0.1uF" H 5950 3325 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 5950 3400 50  0001 C CNN
+F 3 "https://www.mouser.mx/ProductDetail/AVX/12101C104KAZ4A?qs=tl6yqnxyPsFtB9t975fE6w==" H 5950 3400 50  0001 C CNN
+F 4 "12101C104KAZ4A" H 5950 3400 50  0001 C CNN "PartNo"
+	1    5950 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 3275 5950 3275
+Wire Wire Line
+	5950 3300 5950 3275
+Connection ~ 5950 3275
+Wire Wire Line
+	5950 3275 6250 3275
+Wire Wire Line
+	5950 3500 5950 3600
+$Comp
+L Device:R_Small R2
+U 1 1 5E838E6C
+P 7400 4125
+F 0 "R2" H 7459 4171 50  0000 L CNN
+F 1 "10K" V 7400 4100 24  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 7400 4125 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1664068.pdf" H 7400 4125 50  0001 C CNN
+F 4 "RC1210FR-0754K9L" H 7400 4125 50  0001 C CNN "PartNo"
+	1    7400 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3275 7400 3725
+Wire Wire Line
+	7400 4225 7400 4350
+Wire Wire Line
+	7400 4025 7400 4000
+Connection ~ 7400 4000
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5E82CC39
+P 8600 3700
+F 0 "J2" H 8600 3500 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 8600 3475 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 8600 3700 50  0001 C CNN
+F 3 "http://www.agspecinfo.com/pdfs/T/TRTG03.PDF" H 8600 3700 50  0001 C CNN
+F 4 "TRTG-02" H 8600 3700 50  0001 C CNN "PartNo"
+	1    8600 3700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8325 3600 8400 3600
+Wire Wire Line
+	8325 3700 8400 3700
+$EndSCHEMATC
